@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <script src="Practica2Ej3.js"></script>
+</head>
+<body>
+    <h1>Formulario</h1>
+    <form id="formulario" action="#" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre"><br><br>
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos"><br><br>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="dni">DNI no letra:</label>
+        <input type="text" id="dni" name="dni"><br><br>
+
+        <label for="letraDNI">Letra del DNI:</label>
+        <input type="text" id="letraDNI" name="letraDNI" maxlength="1"><br><br>
+
+        <button type="button" onclick="validarFormulario()">Sendin</button>
+    </form>
+
+    <div id="errores"></div>
+    
+</body>
+</html>
