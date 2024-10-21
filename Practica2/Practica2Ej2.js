@@ -8,7 +8,7 @@ function Ejercicio2(){
     
     const opinionUsuario = prompt('Opinion de la pastica con cafelito');
         parrafo.innerHTML += opinionUsuario + "<br>";
-        console.log (opinionUsuario)
+        console.log (opinionUsuario);
         
 /*     
         enlace.addEventListener('click', function(event) {
