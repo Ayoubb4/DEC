@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    height: 100vh;
+  }
+  
+  #icono {
+    width: 50px; /* Tamaño de icono pequeño */
+    height: 50px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+  }
+  

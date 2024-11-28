@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre">
+        
+        <label for="precio">Precio</label>
+            <input type="number" name="precio" id="precio">
+        
+        <label for="categoria">Categoria</label>
+            <select id="categoria">
+                <option value="electronica">Electronica</option>
+                <option value="ropa">Ropa</option>
+                <option value="comida">Comida</option>
+                <option value="telefonia">Telefonia</option>
+            </select>
+
+        <button type="button" onclick=creaProducto()>Crea el producto</button>
+
+        <button type="button" onclick=mostrarProducto()>Mostrar Producto</button>
+
+        <label for="filtro">Filtro</label>
+            <select id="filtro">
+                <option value="electronica">Electronica</option>
+                <option value="ropa">Ropa</option>
+                <option value="comida">Comida</option>
+                <option value="telefonia">Telefonia</option>            
+            </select>
+        <button type="button" onclick=filtroProducto()>Filtrar Producto</button>
+    </form>
+
+    
+    <div id="divProductos">
+    </div>  
+
+    <script src="Ejercicio9.js"></script>
+</body>
+</html>

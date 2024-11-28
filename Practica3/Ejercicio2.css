@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif; /* Establece una fuente legible */
+    display: flex;
+    justify-content: center; /* Centra el formulario horizontalmente */
+    align-items: center; /* Centra el formulario verticalmente */
+    height: 100vh; /* Asegura que ocupe todo el alto de la ventana */
+    margin: 0; /* Elimina márgenes por defecto */
+}
+
+h1 {
+    text-align: center; /* Centra el título */
+}
+
+form {
+    width: 100%; /* Asegura que el formulario use el 100% del contenedor */
+    max-width: 400px; /* Limita el ancho del formulario */
+    padding: 20px; /* Agrega un poco de espacio dentro del formulario */
+    background-color: #f9f9f9; /* Fondo claro para el formulario */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.texto, select {
+    width: 100%; /* Hace que los campos ocupen el 100% del formulario */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid grey;
+    border-radius: 4px;
+    box-sizing: border-box; /* Asegura que el padding y el borde estén incluidos en el ancho total */
+}
+
+.texto:focus, select:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px blue;
+}
+
+.boton {
+    width: 100%; /* Hace que el botón ocupe el 100% del formulario */
+    padding: 10px;
+    background-color: #4a90e2;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none; /* Elimina el borde del botón */
+}
+
+.modal {
+    position: fixed; /* Asegura que el modal esté fijo en la pantalla */
+    display: flex; /* Usar flexbox para centrar */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    z-index: 999; /* Asegura que esté encima de otros elementos */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    height: 100%; /* Ocupa toda la altura de la pantalla */
+    top: 0; /* Posición en la parte superior */
+    left: 0; /* Posición en la parte izquierda */
+}
+
+.modal-content {
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    max-width: 400px; /* Ancho máximo de la ventana modal */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada */
+    text-align: center; /* Centrar el texto */
+    position: relative; /* Para posicionar el botón de cerrar */
+    top: 40%;
+    left: 30%;
+}
+
+.modal-content p {
+    text-transform: uppercase; /* Texto en mayúsculas */
+    font-weight: bold; /* Texto en negrita */
+    margin: 0; /* Eliminar márgenes */
+    font-size: 16px; /* Aumentar tamaño de fuente */
+}
+
+.close {
+    position: absolute; /* Posición absoluta para el botón de cierre */
+    top: 10px; /* Espacio desde la parte superior */
+    right: 10px; /* Espacio desde la derecha */
+    cursor: pointer; /* Cursor tipo puntero */
+    background-color: black;    
+    transition: color 0.3s; /* Transición suave para el color */
+    color: white;
+}
+
+.close:hover {
+    background-color: red;
+    transition: 0.5s; 
+}
+
+
+.boton:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+}

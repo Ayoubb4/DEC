@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="titulo">Escribe el titulo</label>
+        <input type="text" id="titulo">
+        <select name="genero" id="genero">
+            <option value="accion">Accion</option>
+            <option value="drama">Drama</option>
+            <option value="comedia">Comedia</option>
+            <option value="cienciaFiccion">Cienca Ficcion</option>
+        </select>
+        <label for="año">Escribe el año</label>
+        <input type="text" id="año">
+        
+        <button type="button" onclick="crearPelicula()">Crear Pelicula</button>
+        
+        <label for="filtroAño">Escribe a aprtir de que año quieres que se visualicen las peliculas</label>
+        <input type="text" id="filtroAño">
+        <button type="button" onclick="filtrarAño()">Crear Pelicula</button>
+
+    </form>
+    <div id="caja"></div>
+    <script src="Ejercicio5.js"></script>
+</body>
+</html>
