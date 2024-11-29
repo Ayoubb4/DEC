@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="#">
+        <label for="marca">Marca</label>
+        <input type="text" name="marca" id="marca">
+
+        <label for="modelo">Modelo</label>
+        <input type="text" name="modelo" id="modelo">
+
+        <label for="velocidad">Velocidad Maxima</label>
+        <input type="number" name="velocidad" id="velocidad">
+
+        <button type="button" onclick="crearCoche()">Mostrar Detalles</button>
+
+        <label for="incremento">Cantidad de KM/H</label>
+        <input type="number" name="incremento" id="incremento">
+
+        <button type="button" onclick="aumentarVelocidad()">Actualizar Velocidad Maxima</button>
+    </form>
+
+    <div id="listaCoches"></div>
+</body>
+
+</html>
+
+<!-- /* Crea una clase vehiculo, con las siguientes prop y metodos */
+/* 
+Crea una clase vehiculo, con las siguientes prop y metodos
+prop: marca, modelo, y vel max
+metodos: mostrar detalles(muestra los detalles del vehiculo), aumentar velocidad(nos sirve para incrementar la velocidad maxima).
+creamos lista de vehiculos, esa lista permite agregar y eliminar coches, y en el metodo cambia la vel maxima de un coche  
+*/ -->

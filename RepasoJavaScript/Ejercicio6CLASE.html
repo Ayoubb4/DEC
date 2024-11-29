@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required>
+        <label for="animal">Tipo de Animal:</label>
+        <select id="animal">
+            <option value="perro">Perro</option>
+            <option value="gato">Gato</option>
+            <option value="pájaro">Pájaro</option>
+        </select>
+        <button type="button" onclick="crearMascota()">Crear Mascota</button>
+    </form>
+
+    <div id="mostrarPersonaje"></div>
+
+
+
+    <script src="Ejercicio6CLASE.js"></script>
+</body>
+
+</html>
+
+<!-- Ejercicio 6: Simulador de Mascotas Virtuales
+
+Objetivo: Trabajar con lógica condicional y actualización del DOM.
+
+Enunciado:
+
+Crea un simulador donde los usuarios puedan cuidar mascotas virtuales. Cada mascota tiene:
+    1.    Nombre: Obligatorio.
+    2.    Tipo: Lista desplegable (Perro, Gato, Pájaro).
+    3.    Nivel de felicidad: Número entre 0 y 100.
+    4.    Nivel de hambre: Número entre 0 y 100.
+
+Tareas:
+    1.    Permite realizar acciones como “Alimentar”, “Jugar” y “Dormir”, que afecten los niveles de felicidad y hambre.
+    2.    Si el nivel de hambre o felicidad llega a 0, muestra un mensaje de advertencia en pantalla. -->

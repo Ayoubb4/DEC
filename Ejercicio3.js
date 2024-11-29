@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Crea un programa que simule la creacion de futbolistas, cada personaje tiene fuerza (entre 50 y 100),  resistencia(30 y 80), velocidad(20 y 70). Habra que mostrar los stats en el DOM cuando se crea el personaje.
 Implementar una funcion para dar valores aleatorios dentro de un rango.
 Mostrar las estadisticas del personake dentro de una pantalla. */
@@ -30,3 +31,36 @@ function mostrarFutbolista(futbolista) {
 
     div.innerHTML = textoFutbol + "<br>";
 }
+=======
+/* 3- Crea una función que, dada una cadena de texto, devuelve una nueva cadena cambiando la primera letra de  cada palabra en mayúsculas. (3 puntos) 
+ */
+function MayusculaPrimeraLetra() {
+    let texto = prompt ("Dame una serie de palabras");
+    let nuevaCadena = '';
+
+    for (let i = 0; i < texto.length; i++) {
+        let char = texto[i];
+        
+        if(texto[i] == texto[0]){
+        nuevaCadena+= texto[i].toUpperCase();
+        
+        }else if (char == ' ' || char == '.' || char == '. ') {
+            nuevaCadena += char ;
+            nuevaCadena += texto[i + 1].toUpperCase();
+            i++;
+        }/* lse if(char == '. '){
+            nuevaCadena += char ;
+            nuevaCadena += texto[i + 1].toUpperCase();
+            i++;
+        } */
+        else {
+            nuevaCadena += char; 
+        }   
+    }
+
+    return nuevaCadena;
+}
+
+let solucion = MayusculaPrimeraLetra();
+console.log(solucion);
+>>>>>>> 87aa66a (Fin Ejercicios CASA 29/11/2024)
