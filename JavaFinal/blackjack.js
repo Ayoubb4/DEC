@@ -39,7 +39,7 @@ function generarMazo() {
         });
     });
 
-    mazo.sort(() => Math.random() - 0.5);  // Mezclar el mazo
+    mazo.sort(() => Math.random() - 0.5);
 }
 
 function repartirCarta() {
@@ -56,7 +56,7 @@ function calcularPuntuacion(mano) {
     });
 
     while (puntuacion > 21 && ases > 0) {
-        puntuacion -= 10;  // Si la puntuación es mayor que 21 y tiene un As, lo tratamos como 1
+        puntuacion -= 10;
         ases--;
     }
 
@@ -131,7 +131,7 @@ function plantarse() {
 
     puedePlantarse = false;
 }
-
+  
 function finalizarPartida(ganaste) {
     if (ganaste) {
         saldoActual += apuestaActual * 2;
@@ -209,38 +209,38 @@ function registrar() {
     usuarioActivo = username;
 
     document.getElementById("authMessage").textContent = "Registro completo. Ahora puedes añadir tu saldo inicial.";
-    document.getElementById("auth").style.display = "none";    // Ocultar pantalla de login/registro
-    document.getElementById("configSaldo").style.display = "block";  // Mostrar pantalla de saldo
+    document.getElementById("auth").style.display = "none";    
+    document.getElementById("configSaldo").style.display = "block"; 
 }
 
 function setSaldo() {
     const saldoInicial = document.getElementById("saldoInput").value.trim();
 
-    if (!Number.isFinite(+saldoInicial) || saldoInicial <= 0) {
+
+    if (saldoInicial === "" || saldoInicial <= 0 || saldoInicial != parseFloat(saldoInicial)) {
         alert("Por favor, ingresa un saldo válido.");
         return;
     }
 
-    saldoActual = +saldoInicial;
+    saldoActual = parseFloat(saldoInicial); 
     const usuarios = cargarUsuarios();
-    usuarios[usuarioActivo].saldo = saldoActual;  // Actualizar saldo del usuario
+    usuarios[usuarioActivo].saldo = saldoActual;
     guardarUsuarios(usuarios);
 
-    document.getElementById("configSaldo").style.display = "none";   // Ocultar panel de saldo
-    document.getElementById("apuesta").style.display = "block";      // Mostrar panel de apuesta
-    document.getElementById("saldoDisponible").textContent = `Saldo disponible: $${saldoActual.toFixed(2)}`;
+    document.getElementById("configSaldo").style.display = "none"; 
+    document.getElementById("apuesta").style.display = "block";
+    document.getElementById("saldoDisponible").textContent = `Saldo disponible: $${saldoActual}`; 
 }
+
 
 function iniciarApuesta() {
     const montoApuesta = document.getElementById("monto").value;
 
-    // Comprobamos si el montoApuesta es un número mayor que 0 y menor o igual al saldo
     if (montoApuesta === "" || montoApuesta <= 0 || montoApuesta > saldoActual) {
         document.getElementById("errorApuesta").textContent = "Apuesta inválida. Debes apostar una cantidad válida y menor o igual a tu saldo.";
         return;
     }
 
-    // Convertimos el montoApuesta a un número flotante para usarlo
     apuestaActual = parseFloat(montoApuesta);  
 
     // Ocultar el panel de apuesta y comenzar el juego
