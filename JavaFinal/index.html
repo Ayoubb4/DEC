@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="auth">
+        <input type="text" id="username" placeholder="Nombre de usuario" />
+        <button onclick="iniciarSesion()">Iniciar Sesión</button>
+        <button onclick="registrar()">Registrar</button>
+        <p id="authMessage"></p>
+    </div>
+
+    <div id="configSaldo" style="display: none;">
+        <h2>Ingresa el saldo inicial</h2>
+        <input type="number" id="saldoInput" placeholder="Saldo inicial" />
+        <button onclick="setSaldo()">Establecer saldo</button>
+    </div>
+
+    <div id="apuesta" style="display: none;">
+        <h2>¿Cuánto deseas apostar?</h2>
+        <input type="number" id="monto" placeholder="Monto a Apostar" />
+        <button onclick="iniciarApuesta()">Iniciar Apuesta</button>
+        <p id="errorApuesta"></p>
+    </div>
+
+    <div id="juego" style="display: none;">
+        <h2>Juego en curso</h2>
+        <div id="cartasJugador"></div>
+        <div id="cartasCrupier"></div>
+        <p>Puntuación Jugador: <span id="puntuacionJugador">0</span></p>
+        <p>Puntuación Crupier: <span id="puntuacionCrupier">0</span></p>
+        <p id="resultado"></p>
+        <button onclick="pedirCarta()">Pedir Carta</button>
+        <button onclick="plantarse()">Plantarse</button>
+        <button onclick="nuevaPartida()">Nueva Partida</button>
+    </div>
+
+    <div id="saldoDisponible">Saldo disponible: 0.00€</div>
+
+    <script src="blackjack.js"></script>
+</body>
+</html>

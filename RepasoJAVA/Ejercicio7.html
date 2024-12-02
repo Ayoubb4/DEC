@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Registro de Personajes</h1>
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" placeholder="Nombre del personaje">
+    <br>
+
+    <label for="profesion">Profesión:</label>
+    <select id="profesion">
+        <option value="Guerrero">Guerrero</option>
+        <option value="Mago">Mago</option>
+        <option value="Arquero">Arquero</option>
+    </select>
+    <br>
+
+    <button onclick="registrarPersonaje()">Registrar Personaje</button>
+
+    <h2>Personajes Registrados:</h2>
+    <ul id="listaPersonajes"></ul>
+
+    <script src="Ejercicio7.js"></script>
+
+</body>
+</html>
