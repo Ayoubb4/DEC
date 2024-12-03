@@ -162,9 +162,10 @@ function validarNombre() {
 
 // Función para validar todos los campos antes de habilitar el botón
 function validarCampos() {
+    const botonDisabled = document.getElementById("botonDisabled");
     if (validarNombre() && validarAlias() && validarHabilidad()) {
-        document.getElementById("botonDisabled").disabled = false;
+        botonDisabled.disabled = false;
     } else {
-        document.getElementById("botonDisabled").disabled = true;
+        botonDisabled.disabled = true;
     }
 }
