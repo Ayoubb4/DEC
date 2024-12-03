@@ -1,0 +1,32 @@
+<!-- Ejercicio 2: Manipulación Básica del DOM
+
+Nivel: Fácil
+Objetivo: Familiarizarse con la creación y eliminación de elementos en el DOM.
+
+Enunciado:
+
+Crea una página que permita a los usuarios agregar y eliminar elementos de una lista de tareas.
+
+Tareas:
+   1.    Agrega un campo de texto y un botón “Agregar tarea”.
+   2.    Cada tarea agregada debe mostrarse en una lista con un botón “Eliminar” al lado.
+   3.    Permite eliminar tareas al hacer clic en el botón correspondiente. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="tarea">Tarea</label>
+    <input type="text" id="tareaInput" placeholder="Escribe una tarea">
+    <button onclick="agregarTarea()">Agregar tarea</button>
+
+    <ul id="listaTareas"></ul>
+
+    <script src="Ejercicio2.js"></script>
+</body>
+</html>
