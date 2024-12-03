@@ -1,9 +1,11 @@
-listaPersonajes = [];
+let listaPersonajes = [];
 
+// Función para generar números aleatorios dentro de un rango
 function generarAleatorio(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+// Clase Campeon
 class Campeon {
     constructor(nombre, alias, rol, habilidadPrincipal, dificultad) {
         this.nombre = nombre;
@@ -54,6 +56,7 @@ class Campeon {
     }
 }
 
+// Clase GestorDeCampeones
 class GestorDeCampeones {
     constructor() {
         this.campeones = [];
@@ -64,9 +67,10 @@ class GestorDeCampeones {
         this.mostrarCampeonesDOM(); // Llamamos a mostrarCampeonesDOM después de agregar el campeón
     }
 
-    eliminarCampeon(index) {
-        this.campeones.splice(index, 1);
-        this.mostrarCampeonesDOM(); // Volver a mostrar la lista después de eliminar el campeón
+    eliminarCampeon(posicion) {
+        // Eliminar el campeón del array
+        this.campeones.splice(posicion, 1);
+        this.mostrarCampeonesDOM(); // Actualizar la vista después de eliminar el campeón
     }
 
     mostrarCampeonesDOM() {
@@ -77,10 +81,11 @@ class GestorDeCampeones {
 
         let presentaciones = "";
 
-        this.campeones.forEach((campeon, index) => {
+        // Recorrer el array de campeones para mostrar todos los campeones actuales
+        this.campeones.forEach((campeon, posicion) => {
             presentaciones += `¡${campeon.nombre} agregado como ${campeon.rol}!` + "<br>";
 
-            let textoCampeones = `
+            let textoCampeones = ` 
                 Campeón ${campeon.nombre} con el alias ${campeon.alias}, con su rol ${campeon.rol}, 
                 habilidad seleccionada ${campeon.habilidadPrincipal}, ha escogido la dificultad ${campeon.dificultad},
                 y con estadísticas ${campeon.daño} de daño, ${campeon.resistencia} de resistencia, ${campeon.velocidad} de velocidad
@@ -89,10 +94,11 @@ class GestorDeCampeones {
             let li = document.createElement("li");
             li.textContent = textoCampeones;
 
+            // Crear un botón de eliminación para cada campeón
             let botonEliminar = document.createElement("button");
             botonEliminar.textContent = "Eliminar";
             botonEliminar.onclick = () => {
-                this.eliminarCampeon(index);
+                this.eliminarCampeon(posicion); // Eliminar el campeón al hacer clic en el botón
             };
 
             li.appendChild(botonEliminar);
@@ -116,6 +122,7 @@ function crearCampeon() {
     gestor.agregarCampeon(campeon); // Usamos la función del gestor
 }
 
+// Funciones de validación de campos
 function validarHabilidad() {
     const habilidadPrincipal = document.getElementById("habilidad").value;
     const habilidadesPattern = /^[a-zA-Z0-9]{1,100}$/;
@@ -153,6 +160,7 @@ function validarNombre() {
     }
 }
 
+// Función para validar todos los campos antes de habilitar el botón
 function validarCampos() {
     if (validarNombre() && validarAlias() && validarHabilidad()) {
         document.getElementById("botonDisabled").disabled = false;
@@ -160,7 +168,3 @@ function validarCampos() {
         document.getElementById("botonDisabled").disabled = true;
     }
 }
-
-document.getElementById("nombre").addEventListener("input", validarCampos);
-document.getElementById("alias").addEventListener("input", validarCampos);
-document.getElementById("habilidad").addEventListener("input", validarCampos);

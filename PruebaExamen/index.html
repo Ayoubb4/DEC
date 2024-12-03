@@ -4,22 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestión de Campeones</title>
-    <style>
-        .error {
-            color: red;
-            font-size: 12px;
-        }
-    </style>
 </head>
 <body>
     <form>
         <label for="nombre">Nombre</label>
         <input type="text" name="nombre" id="nombre" oninput="validarCampos()">
-        <span id="errorNombre" class="error"></span>
+        <span id="errorNombre"></span>
 
         <label for="alias">Alias</label>
         <input type="text" name="alias" id="alias" oninput="validarCampos()">
-        <span id="errorAlias" class="error"></span>
+        <span id="errorAlias"></span>
 
         <label for="rol">Rol Principal</label>
         <select name="rol" id="rol" oninput="validarCampos()">
@@ -33,7 +27,7 @@
 
         <label for="habilidad">Habilidad Principal</label>
         <input type="text" name="habilidad" id="habilidad" oninput="validarCampos()">
-        <span id="errorHabilidad" class="error"></span>
+        <span id="errorHabilidad"></span>
 
         <label for="dificultad">Dificultad</label>
         <select name="dificultad" id="dificultad" oninput="validarCampos()">
@@ -48,6 +42,7 @@
     </form>
 
     <div id="presentaciones"></div>
+    
     <ul id="listaCampeones"></ul>
 
     <script src="examen.js"></script>
