@@ -1,0 +1,30 @@
+<!-- 1- Formulario que permita registrar jugadores para un torneo de petanca, con los siguientes campos:
+Nombre de jugador obligatorio *
+Edad obligatorio * (número entre 12 y 40)
+Alias obligatorio * (solo letras y números, máximo 12 carácteres) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+        <label for="edad">Edad</label>
+        <input type="number" name="edad" id="edad" placeholder="Edad" required>
+        <label for="alias">Alias</label>
+        <input type="text" name="alias" id="alias" placeholder="Alias" required>
+
+        <button type="button">Guardar</button>
+    </form>
+
+    <script src="Ejercicio1.js"></script>
+</body>
+
+</html>

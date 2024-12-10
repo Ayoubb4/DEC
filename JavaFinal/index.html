@@ -1,46 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blackjack</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+    <!-- Bloque de autenticacion -->
     <div id="auth">
         <input type="text" id="username" placeholder="Nombre de usuario" />
+        <input type="text" id="telefono" placeholder="Teléfono (9 digitos)" />
+        <input type="number" id="edad" placeholder="Edad" />
         <button onclick="iniciarSesion()">Iniciar Sesión</button>
         <button onclick="registrar()">Registrar</button>
         <p id="authMessage"></p>
+        <!-- Aquí saldrán mensajes de errores o confirmaciones -->
     </div>
 
+    <!-- Bloque para configurar saldo inicial -->
     <div id="configSaldo" style="display: none;">
         <h2>Ingresa el saldo inicial</h2>
         <input type="number" id="saldoInput" placeholder="Saldo inicial" />
         <button onclick="setSaldo()">Establecer saldo</button>
     </div>
 
+    <!-- Bloque para las apuestas -->
     <div id="apuesta" style="display: none;">
         <h2>¿Cuánto deseas apostar?</h2>
         <input type="number" id="monto" placeholder="Monto a Apostar" />
         <button onclick="iniciarApuesta()">Iniciar Apuesta</button>
         <p id="errorApuesta"></p>
+        <!-- Mensaje si hay error con la apuesta -->
     </div>
 
+    <!-- Bloque del juego -->
     <div id="juego" style="display: none;">
         <h2>Juego en curso</h2>
         <div id="cartasJugador"></div>
+        <!-- Cartas que tiene el jugador -->
         <div id="cartasCrupier"></div>
+        <!-- Cartas que tiene el crupier -->
         <p>Puntuación Jugador: <span id="puntuacionJugador">0</span></p>
         <p>Puntuación Crupier: <span id="puntuacionCrupier">0</span></p>
         <p id="resultado"></p>
+        <!-- Resultado de la partida -->
         <button onclick="pedirCarta()">Pedir Carta</button>
         <button onclick="plantarse()">Plantarse</button>
         <button onclick="nuevaPartida()">Nueva Partida</button>
     </div>
 
+    <!-- Saldo total -->
     <div id="saldoDisponible">Saldo disponible: 0.00€</div>
 
+    <!-- Archivo JavaScript -->
     <script src="blackjack.js"></script>
 </body>
+
 </html>

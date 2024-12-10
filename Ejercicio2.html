@@ -1,0 +1,23 @@
+<!-- Crea una pagina que permita a los usuarios agregar y eliminar tareas en una lista, al agregar una tarea, se debe mostrar en la lista junto a un boton para eliminarla.
+Al pulsar el boton de eliminar, se debe eliminar la tarea de la lista. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <label for="tituloTarea">Titulo Tarea</label>
+        <input type="text" id="tituloTarea">
+        <label for="descTarea">Desc Tarea</label>
+        <input type="text" id="descTarea">
+        <button onclick="crearTarea()"></button>
+        <label for="borrar">Escribe el numero de tarea que quieres borrar</label>
+        <input type="text" id="numTarea">
+        <button onclick="borrarTarea()"></button>
+    <div id="cuadroTareas"></div>
+    <script src="Ejercicio2.js"></script>
+</body>
+</html>
