@@ -1,0 +1,28 @@
+body{
+    background-color: grey;
+    display: flex;
+}
+#formulario{
+    
+    background-color: antiquewhite;
+    width: 50%;
+}
+#formulario form{
+    margin-top: 10px;
+    margin-left: 30px;
+}
+#textoNewCampeon{
+    margin-top: 10px;
+    margin-left: 30px;
+}
+#arrayCampeones{
+    margin-left: 30px;
+}
+#campeon {
+    border-radius: 5px;
+    background-color: antiquewhite;
+}
+.text{
+    margin-left: 30px;
+    margin-right: 30px;
+}

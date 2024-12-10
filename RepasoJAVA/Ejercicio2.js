@@ -26,4 +26,5 @@ function agregarTarea() {
 
     document.getElementById("listaTareas").appendChild(li);
 
+    tareaInput.value = "";
 }

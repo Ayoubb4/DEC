@@ -1,0 +1,43 @@
+<!-- Ejercicio 3: Calculadora de Costo
+
+Nivel: Intermedio
+Objetivo: Introducir cálculos básicos y eventos.
+
+Enunciado:
+
+Crea un programa que calcule el costo de una compra:
+   1.    Producto (seleccionable entre varias opciones con precios).
+   2.    Cantidad.
+
+Tareas:
+   1.    Al seleccionar un producto y la cantidad, muestra el costo total dinámicamente.
+   2.    Incluye validaciones para evitar números negativos o campos vacíos. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="producto">Producto:</label>
+    <select id="producto" oninput="calcularCosto()">
+        <option value="" selected disabled>Selecciona un producto</option>
+        <option value="10">Producto A 10€</option>
+        <option value="20">Producto B 20€</option>
+        <option value="30">Producto C 30€</option>
+    </select>
+
+    <br><br>
+
+    <label for="cantidad">Cantidad:</label>
+    <input type="number" id="cantidad" placeholder="Ingresa la cantidad" oninput="calcularCosto()">
+
+    <br><br>
+
+    <p id="resultado">Costo total: 0€</p>
+
+    <script src="Ejercicio3.js"></script>
+</body>
+</html>

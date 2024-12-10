@@ -1,0 +1,58 @@
+<!-- Expresiones regulares para hacer el examen:
+
+numeros letras y 15 caracteres:
+
+const regex = /^[a-zA-Z0-9]{0,15}$/;
+
+números, letras y máximo 100 caracteres:
+
+const regex = /^[a-zA-Z0-9]{1,100}$/; -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" onblur="validarNombre()">
+
+        <label for="alias">Alias</label>
+            <input type="text" name="alias" id="alias" onblur="validarAlias()">
+
+        <label for="rol">Rol Principal</label>  
+            <select name="rol" id="rol">
+                <option value="asesino">Asesino</option>
+                <option value="tanque">Tanque</option>
+                <option value="mago">Mago</option>
+                <option value="soporte">Soporte</option>
+                <option value="luchador">Luchador</option>
+                <option value="tirador">Tirador</option>
+            </select>
+
+        <label for="habilidad">Habilidad Principal</label>
+            <input type="text" name="habilidad" id="habilidad" onblur="validarHabilidad()">
+
+        <label for="dificultad">Dificultad</label>
+            <select name="dificultad" id="dificultad">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+        <button id="botonDisabled" type="button" onclick="crearCampeon()">Agrega un Campeon</button>
+    </form>
+    <div id="presentaciones"></div>
+
+    <ul id="listaCampeones">
+
+    </ul>
+
+    <script src="ExamenJSAyoub.js"></script>
+</body>
+</html>

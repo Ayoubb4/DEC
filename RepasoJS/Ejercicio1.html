@@ -1,0 +1,37 @@
+<!-- Ejercicio 1: Validaciones Básicas
+
+Nivel: Fácil
+Objetivo: Practicar validaciones dinámicas en formularios.
+
+Enunciado:
+
+Crea un formulario que permita ingresar:
+   1.    Nombre (obligatorio, máximo 20 caracteres).
+   2.    Edad (obligatoria, número entre 1 y 120).
+
+Tareas:
+   1.    Valida los datos dinámicamente y muestra mensajes de error debajo de los campos incorrectos.
+   2.    Desactiva el botón “Enviar” hasta que los campos sean válidos. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="formulario">
+        <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" oninput="validarFormulario()" required>
+            <p id="nombreError"></p>
+
+        <label for="edad">Edad</label>
+            <input type="number" name="edad" id="edad" oninput="validarFormulario()" required>
+            <p id="edadError"></p>
+
+        <button type="submit" id="enviar" disabled oninput="validarFormulario()">Enviar</button>
+    </form>
+    <script src="Ejercicio1.js"></script>
+</body>
+</html>

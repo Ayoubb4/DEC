@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styeles.css">
+</head>
+<body>
+    <div id="formulario">
+        <form action="">
+            <label for="nombre">Escribe el nombre de tu campeon</label><br>
+            <input type="text" id="nombre" onblur="validarNombre()"><br>
+            <label id="errorNombre" ></label>
+            <label for="alias">Escribe el alias de tu campeon</label><br>
+            <input type="text"  id="alias" onblur="validarAlias()" required><br>
+            <label id="errorAlias"></label>
+            <label for="rol">Escribe el rol de tu campeon</label><br>
+            <select  id="rol"><br>
+                <option value="Asesino">Asesino</option>
+                <option value="Tanque">Tanque</option>
+                <option value="Mago">Mago</option>
+                <option value="Soporte">Soporte</option>
+                <option value="Luchador">Luchador</option>
+                <option value="Tirador">Tirador</option>
+            </select>
+            <label for="habilidad">Escribe el nombre de la habilidad principal de tu campeon</label><br>
+            <input type="text" id="habilidad" onblur="validarHabilidad()" required><br>
+            <label id="errorHabilidad"></label>
+            <label for="dificultad">Elige la dificultad de tu campeon</label><br>
+            <select id="dificultad"><br>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <button type="button" id="boton" disabled onclick="crearCampeon()">Crear Campeon</button>
+        </form>
+        <div id="textoNewCampeon"></div>
+
+    </div>
+    
+    <div id="arrayCampeones"></div>
+    <script src="script.js"></script>
+</body>
+</html>

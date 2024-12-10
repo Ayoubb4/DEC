@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Campeones</title>
+</head>
+<body>
+    <form>
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre" oninput="validarCampos()">
+        <span id="errorNombre"></span>
+
+        <label for="alias">Alias</label>
+        <input type="text" name="alias" id="alias" oninput="validarCampos()">
+        <span id="errorAlias"></span>
+
+        <label for="rol">Rol Principal</label>
+        <select name="rol" id="rol" oninput="validarCampos()">
+            <option value="asesino">Asesino</option>
+            <option value="tanque">Tanque</option>
+            <option value="mago">Mago</option>
+            <option value="soporte">Soporte</option>
+            <option value="luchador">Luchador</option>
+            <option value="tirador">Tirador</option>
+        </select>
+
+        <label for="habilidad">Habilidad Principal</label>
+        <input type="text" name="habilidad" id="habilidad" oninput="validarCampos()">
+        <span id="errorHabilidad"></span>
+
+        <label for="dificultad">Dificultad</label>
+        <select name="dificultad" id="dificultad" oninput="validarCampos()">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+
+        <button id="botonDisabled" type="button" onclick="crearCampeon()" disabled>Agregar Campeón</button>
+    </form>
+
+    <div id="presentaciones"></div>
+    
+    <ul id="listaCampeones"></ul>
+
+    <script src="examen.js"></script>
+</body>
+</html>

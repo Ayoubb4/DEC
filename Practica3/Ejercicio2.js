@@ -38,11 +38,11 @@ document.addEventListener("DOMContentLoaded", () => {
             case "fecha":
                 if (!validaciones.fecha.test(valor)) return "Fecha mala. Formato: dd/mm/aaaa, entre 1900 y 2099";
                 const [dia, mes, año] = valor.split('/').map(Number);
-
+                
                 const fechaNacimiento = new Date(año, mes - 1, dia);
                 const fechaActual = new Date();
                 const edad = fechaActual.getFullYear() - fechaNacimiento.getFullYear();
-
+                
                 if (fechaNacimiento > fechaActual) return "La fecha no puede ser en el futuro";
                 if (edad < 18 || (edad === 18 && fechaActual < new Date(año + 18, mes - 1, dia))) {
                     return "Debes ser mayor de edad";
@@ -90,8 +90,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (todosLosCamposValidos()) {
             mostrarModal("Muy bien tio, se ha enviado todo bene");
-            form.reset();
-            registrarBoton.disabled = false;
+            form.reset(); 
+            registrarBoton.disabled = true;
         }
     });
 
@@ -100,3 +100,4 @@ document.addEventListener("DOMContentLoaded", () => {
         if (event.target === modal) modal.style.display = "none";
     });
 });
+
